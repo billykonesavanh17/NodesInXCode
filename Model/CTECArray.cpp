@@ -107,6 +107,7 @@ void CTECArray<Type>::set(int position, const Type& value)
 			current->setValue(value);
 		}
 	}
+}
 /*
  1) Assert size is greater than 0.
  2) Declare and init valid return variable.
@@ -114,13 +115,13 @@ void CTECArray<Type>::set(int position, const Type& value)
  4) If there,return index, else go to next.
  5) Return index.
  */
-template<class Type>
+template <class Type>
 int CTECArray<Type> ::indexOf(Type searchValue)
     {
-        assert(this->size < 0)
+        assert(this->size < 0);
         int indexNotFound = -1;
         
-        ArrayNode * current = head;
+        ArrayNode<Type> * current = head;
         
         for(int index = 0; index < this-> size; index++)
         {
@@ -134,7 +135,7 @@ int CTECArray<Type> ::indexOf(Type searchValue)
             }
         }
         
-        return indexOfValue;
+        return indexNotFound;
     }
 
-}
+
