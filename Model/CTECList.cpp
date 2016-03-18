@@ -304,3 +304,23 @@ Type CTECList<Type>:: set(int index, const Type& value)
 		}
 
 }
+
+template <class Type>
+int CTECList<Type> :: indexOf(Type searchValue)
+{
+    assert(this -> size > 0);
+    int index = 0;
+    ArrayNode<Type> * searchPointer;
+    
+    for(searchPointer = head; searchPointer != nullptr; searchPointer = searchPointer -> getNext())
+    {
+        if(searchValue == searchPointer -> getValue())
+        {
+            return index;
+        }
+         index++;
+    }
+    index = -1;
+    
+    return index;
+}
