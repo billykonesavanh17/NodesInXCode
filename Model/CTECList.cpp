@@ -92,11 +92,14 @@ void CTECList<Type>:: addAtIndex(int index, const Type& value)
 		ArrayNode<Type> * previous, next;
 			if(index == 0)
 			{
-
+                ArrayNode<Type> * newNode = new ArrayNode<Type>(value, head);
+                head = newNode;
 			}
 			else if(index == size - 1)
 			{
-
+                ArrayNode<Type> * newNode = new ArrayNode<Type>(value);
+                end -> setNext(newNode);
+                end = newNode;
 			}
 			else
 			{
@@ -110,22 +113,23 @@ void CTECList<Type>:: addAtIndex(int index, const Type& value)
 			return thingToAdd;
 }
 
-template<class Type>
+template <class Type>
 Type CTECList<Type>:: getFront()
 {
 	if(index == 0)
 	{
 	return head -> getValue();
 	}
+
 }
 
 template<class Type>
 Type CTECList<Type>:: getEnd()
 {
-	if(index == size - 1)
-	{
-	return head -> getValue();
-	}
+        if(index == size - 1)
+        {
+            return head -> getValue();
+        }
 }
 
 template<class Type>
@@ -218,7 +222,7 @@ Type CTECList<Type>:: removeFromEnd()
 
 	thingToRemove = current -> getNext() -> getValue();
 	end = current;
-	delete current -> getnext();
+	delete current -> getNext();
 
 	this -> calculateSize();
 	return thingToRemove;
