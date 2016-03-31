@@ -28,6 +28,12 @@ private:
     void sortData();
     void testLists();
     void searchTest();
+    void doBogo();
+    
+    void swap(int first, int second);
+    void quicksort(int first, int size);
+    int partition(int first, int last);
+    void doQuick();
     
     int  * mergeData;
     void doMergesort();
