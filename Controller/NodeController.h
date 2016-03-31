@@ -26,8 +26,14 @@ private:
 	CTECArray<int> * notHipsterInts;
 	CTECList<int> * numbers;
 	Timer arrayTimer;
-	void testLists();
-    void checkSorts();
+    void sortData();
+    void testLists();
+    void searchTest();
+    
+    int  * mergeData;
+    void doMergesort();
+    void mergesort(int data [], int size);
+    void merge(int data [], int sizeOne, int sizeTwo);
 public:
 	NodeController();
 	virtual ~NodeController();
