@@ -9,7 +9,6 @@
 #ifndef TreeNode_hpp
 #define TreeNode_hpp
 
-#include <stdio.h>
 #include "Node.h"
 
 template <class Type>
