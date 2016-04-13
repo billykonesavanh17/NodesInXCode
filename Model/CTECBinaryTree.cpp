@@ -11,6 +11,15 @@
 using namespace std;
 
 template <class Type>
+CTECBinaryTree<Type> :: CTECBinaryTree()
+{
+    root = nullptr;
+    height = 0;
+    balanced = true;
+    size = 0;
+}
+
+template <class Type>
 void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
