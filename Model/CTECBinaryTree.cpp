@@ -20,6 +20,33 @@ CTECBinaryTree<Type> :: CTECBinaryTree()
 }
 
 template <class Type>
+bool CTECBinaryTree<Type> :: insert(const Type& value)
+{
+    if(contains (value))
+    {
+        return false;
+    }
+    else
+    {
+        if(value < root -> getValue())
+        {
+            
+        }
+        else
+        {
+            
+        }
+        return true;
+    }
+}
+
+template <class Type>
+void CTECBinaryTree<Type> :: insert(const Type& value, CTECBinaryTree<Type> * currentTree)
+{
+    
+}
+
+template <class Type>
 void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
