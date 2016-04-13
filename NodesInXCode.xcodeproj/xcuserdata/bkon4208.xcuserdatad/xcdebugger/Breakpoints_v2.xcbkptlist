@@ -59,7 +59,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "getParent()"
+            landmarkName = "setParent(TreeNode&lt;Type&gt; * parent)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -75,7 +75,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "setLeftChild(const Type &amp; value)"
+            landmarkName = "setLeftChild(TreeNode&lt;Type&gt; * leftChild)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
