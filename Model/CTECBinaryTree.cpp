@@ -70,11 +70,6 @@ bool CTECBinaryTree<Type> :: insert(const Type& value)
     
 }
 
-template <class Type>
-void CTECBinaryTree<Type> :: insert(const Type& value, CTECBinaryTree<Type> * currentTree)
-{
-    
-}
 
 template <class Type>
 Type CTECBinaryTree<Type> :: remove(const Type& value)
