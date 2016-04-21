@@ -72,7 +72,13 @@ void NodeController :: tryTree()
     testTree.insert(10);
     testTree.insert(-5);
     
+    cout << testTree.contains(4) << endl;
+    cout << " Inorder Traveral " << endl;
     testTree.inorderTraversal(testTree.getRoot());
+    cout << " \nPreoder Traversal " << endl;
+     testTree.preorderTraversal(testTree.getRoot());
+    cout << " \nPostorder Traversal " << endl;
+     testTree.postorderTraversal(testTree.getRoot());
     cout<< " Tree " << endl;
     
     
