@@ -111,6 +111,57 @@ void CTECBinaryTree<Type> :: remove(const Type& value)
 }
 
 template <class Type>
+void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
+{
+    TreeNode<Type> * current;
+    TreeNode<Type> * trailing;
+    TreeNode<Type> * temp;
+    
+    if(nodeToRemove == nullptr)
+    {
+        cerr << "You can't remove an empty non-existent thing" << endl;
+    }
+    else if(nodeToRemove -> getRightChild() == nullptr && nodeToRemove -> getLeftChild() == nullptr)   //Leaf node
+    {
+        temp = nodeToRemove;
+        nodeToRemove = nullptr;
+        delete temp;
+    }
+    else if(nodeToRemove -> getRightChild() == nullptr)
+    {
+        temp = nodeToRemove;
+        nodeToRemove = temp -> getLeftChild();
+        delete temp;
+    }
+    else if(nodeToRemove -> getLeftChild() == nullptr)
+    {
+        temp = nodeToRemove;
+        nodeToRemove = temp -> getRightChild();
+        delete temp;
+    }
+    else
+    {
+        current = nodeToRemove -> getLetChild();
+        trailing = nullptr;
+        while(current -> getRightChild != nullptr)
+        {
+            trailing = current;
+            current = current -> getRightChild();
+        }
+        nodeToRemove -> setValue(current -> getValue());
+        if(trailing == nullptr)
+        {
+            nodeToRemove -> setLeftChild(current -> getLeftChild());
+        }
+        else
+        {
+            trailing -> setRightChild(current -> getLeftChild());
+        }
+        delete current;
+    }
+}
+
+template <class Type>
 void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
