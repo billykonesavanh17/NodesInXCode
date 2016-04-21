@@ -61,8 +61,16 @@ void NodeController :: sortData()
 
 void NodeController::start()
 {
-    doMergesort();
+    tryTree();
 
+}
+
+void NodeController :: tryTree()
+{
+    CTECBinaryTree<int> testTree;
+    testTree.insert(7);
+    testTree.insert(10);
+    testTree.insert(-5);
 }
 
 void NodeController::doMergesort()
