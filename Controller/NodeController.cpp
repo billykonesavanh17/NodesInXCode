@@ -71,6 +71,11 @@ void NodeController :: tryTree()
     testTree.insert(7);
     testTree.insert(10);
     testTree.insert(-5);
+    
+    testTree.inorderTraversal(testTree.getRoot());
+    cout<< " Tree " << endl;
+    
+    
 }
 
 void NodeController::doMergesort()
