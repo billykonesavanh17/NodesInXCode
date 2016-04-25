@@ -72,3 +72,9 @@ TreeNode<Type> * TreeNode<Type>::getParent()
 {
     return this -> parent;
 }
+
+template <class Type>
+TreeNode<Type> * TreeNode<Type>::getRoot()
+{
+    return this -> root;
+}

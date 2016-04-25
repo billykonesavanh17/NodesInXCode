@@ -58,7 +58,7 @@ bool CTECBinaryTree<Type> :: insert(const Type& value)
                 
                 if(current -> getValue() > value)
                 {
-                    current = current -> getLeftChid();
+                    current = current -> getLeftChild();
                 }
                 else
                 {
@@ -152,7 +152,7 @@ void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
     }
     else
     {
-        current = nodeToRemove -> getLetChild();
+        current = nodeToRemove -> getLeftChild();
         trailing = nullptr;
         while(current -> getRightChild != nullptr)
         {

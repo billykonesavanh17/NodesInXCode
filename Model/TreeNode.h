@@ -18,6 +18,7 @@ private:
     TreeNode<Type> * leftChild;
     TreeNode<Type> * rightChild;
     TreeNode<Type> * parent;
+    TreeNode<Type> * root;
 public:
     TreeNode();
     TreeNode(const Type & value);
@@ -28,6 +29,7 @@ public:
     TreeNode<Type> * getLeftChild();
     TreeNode<Type> * getRightChild();
     TreeNode<Type> * getParent();
+    TreeNode<Type> * getRoot();
 };
 
 #endif /* TreeNode_h*/

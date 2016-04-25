@@ -20,7 +20,7 @@ void Graph<Type> :: addEdge(int source, int target)
 }
 
 template <class Type>
-void Graph<Type> :: addVertex(const Type& label)
+void Graph<Type> :: addVertex(const Type& vertexLabel)
 {
     int newVertexNumber;
     int otherNumber;
@@ -36,7 +36,7 @@ void Graph<Type> :: addVertex(const Type& label)
         edges [newVertexNumber] [otherNumber] = false;
     }
     
-    label [newVertexNumber] = label;
+    labels [newVertexNumber] = vertexLabel;
 }
 
 template <class Type>
@@ -48,4 +48,42 @@ bool Graph<Type> :: isEdge(int source, int target) const
     connected = edges [source] [target];
     
     return connected;
+}
+
+template <class Type>
+Type& Graph<Type> :: operator[] (int vertex)
+{
+    assert(vertex < size());
+    return labels [vertex];
+}
+
+template <class Type>
+Type Graph<Type> :: operator[] (int vertex) const
+{
+    assert(vertex < size());
+    return labels [vertex];
+}
+
+template <class Type>
+std :: set<int> Graph<Type> :: neighbors(int vertex) const
+{
+    std::set<int> answer;
+    asert(vertex < size());
+    
+    for(int index = 0; index < size(); index++)
+    {
+        if(edges [vertex] [index])
+        {
+            answer.insert(index);
+        }
+    }
+    
+    return answer;
+}
+
+template <class Type>
+void Graph<Type> :: removeEdge(int source, int target)
+{
+    asert(source < size() && target < size());
+    edges[source] [target] = false;
 }
