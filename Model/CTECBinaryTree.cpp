@@ -28,12 +28,6 @@ CTECBinaryTree<Type> :: ~CTECBinaryTree()
     }
 }
 
-template <class Type>
-CTECBinaryTree<Type> * CTECBinaryTree<Type> :: ()
-{
-    
-}
-
 
 
 template <class Type>
