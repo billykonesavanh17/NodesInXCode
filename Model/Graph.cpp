@@ -7,6 +7,8 @@
 //
 
 #include "Graph.hpp"
+#include <iostream>
+#include <queue>
 
 template <class Type>
 const int Graph<Type> :: MAXIMUM;
@@ -86,4 +88,23 @@ void Graph<Type> :: removeEdge(int source, int target)
 {
     asert(source < size() && target < size());
     edges[source] [target] = false;
+}
+
+template <class Type>
+void Graph<Type>:: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>::iterator setIterator;
+    std::queue<int> vertexQueue;
+    assert(vertex < currentGraph.size());
+    
+    std::fill_n(markedVertices, currentGraph.size(), false);
+    markedVertices[vertex] = true;
+    cout << currentGraph[vertex] << endl;
+    vertexQueue.push(vertex);
+    while(!vertexQueue.empty())
+    {
+        connections = currentGraph.neighbors(vertexQueue.front());
+    }
 }
