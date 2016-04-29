@@ -17,6 +17,7 @@
 #include "../Model/Timer.h"
 #include "../Model/CTECList.cpp"
 #include "../Model/CTECBinaryTree.cpp"
+#include "../Model/Graph.cpp"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ private:
     void merge(int data [], int sizeOne, int sizeTwo);
     
     void tryTree();
+    void tryGraphs();
 public:
 	NodeController();
 	virtual ~NodeController();

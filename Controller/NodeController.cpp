@@ -238,3 +238,26 @@ void NodeController :: doQuick()
 
     delete [] mergeData;
 }
+
+void NodeController::tryGraphs()
+{
+    Graph<int> testerGraph;
+    testerGraph.addVertex(7);
+    testerGraph.addVertex(18);
+    testerGraph.addVertex(9);
+    testerGraph.addVertex(17);
+    testerGraph.addVertex(6);
+    testerGraph.addVertex(3);
+    testerGraph.addVertex(11);
+    //Add at least 7 vertices.
+    //Connct the vertices
+    testerGraph.addEdge(7,18);
+    testerGraph.addEdge(18,9);
+    testerGraph.addEdge(9,17);
+    testerGraph.addEdge(17,6);
+    testerGraph.addEdge(6,3);
+    testerGraph.addEdge(3,11);
+    
+    testerGraph.breadthFirstTraversal(testerGraph, 0);
+    
+}
