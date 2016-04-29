@@ -116,20 +116,39 @@ void CTECList<Type>:: addAtIndex(int index, const Type& value)
 template <class Type>
 Type CTECList<Type>:: getFront()
 {
-	if(index == 0)
-	{
-	return head -> getValue();
-	}
+
+    Type ValueOfHead;
+    assert(this-> size > 0);
+    ArrayNode<Type> * newHead = new ArrayNode<Type>();
+    
+    ValueOfHead  = this->head->getValue();
+    return ValueOfHead;
 
 }
 
 template<class Type>
 Type CTECList<Type>:: getEnd()
 {
-        if(index == size - 1)
+    assert(this -> size > 0);
+    int count = 1;
+    ArrayNode<Type> * counterPointer = head;
+    
+    if(counterPointer==nullptr)
+    {
+        this->size = 0;
+        
+    }
+    else
+    {
+        count ++;
+        while ( counterPointer -> getNext() != nullptr)
         {
-            return head -> getValue();
+            counterPointer = counterPointer ->getNext();
+            count++;
         }
+        this->size = count;
+    }
+    return 0;
 }
 
 template<class Type>
@@ -141,7 +160,7 @@ Type CTECList<Type>:: getFromIndex(int index)
     assert(index >= 0 && index < size);
     
     ArrayNode<Type> * current = head;
-    Type returnValue;
+    Type returnValue ;
     
     for(int spot = 0; spot <= index; spot++)
     {
@@ -287,20 +306,9 @@ void CTECList<Type> :: calculateSize()
 template<class Type>
 Type CTECList<Type>:: set(int index, const Type& value)
 {
-	assert(index < size && index >= 0);
-
-		ArrayNode<Type> * current = head;
-		for (int spot = 0; spot <= index; spot++)
-		{
-			if (spot != index)
-			{
-				current = current->getNext();
-			}
-			else
-			{
-				current->setValue(value);
-			}
-		}
+    Type set;
+    
+    return set;
 
 }
 

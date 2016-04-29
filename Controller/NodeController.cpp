@@ -165,16 +165,7 @@ void NodeController::merge(int data [], int sizeOne, int sizeTwo)
     delete [] temp;
 }
 
-void NodeController :: doBogo()
-{
-    int temp [10];
-    int check [10];
-    
-    for(int index = 0; index < 10; index++)
-    {
-        check[index] = index;
-    }
-}
+
 
 void NodeController :: quicksort(int first, int last)
 {

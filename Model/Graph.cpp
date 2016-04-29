@@ -90,7 +90,7 @@ template <class Type>
 std :: set<int> Graph<Type> :: neighbors(int vertex) const
 {
     std::set<int> answer;
-    asert(vertex < size());
+    assert(vertex < size());
     
     for(int index = 0; index < size(); index++)
     {

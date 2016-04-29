@@ -28,6 +28,12 @@ CTECBinaryTree<Type> :: ~CTECBinaryTree()
     }
 }
 
+template<class Type>
+TreeNode<Type> * CTECBinaryTree<Type> :: getRoot()
+{
+    
+}
+
 
 
 template <class Type>
@@ -154,7 +160,7 @@ void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
     {
         current = nodeToRemove -> getLeftChild();
         trailing = nullptr;
-        while(current -> getRightChild != nullptr)
+        while(current -> getRightChild() != nullptr)
         {
             trailing = current;
             current = current -> getRightChild();

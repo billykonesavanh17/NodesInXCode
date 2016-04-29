@@ -30,7 +30,6 @@ private:
     void sortData();
     void testLists();
     void searchTest();
-    void doBogo();
     
     void swap(int first, int second);
     void quicksort(int first, int size);
