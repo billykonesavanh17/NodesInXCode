@@ -20,12 +20,14 @@ private:
     int capacity;
     double efficiencyPercentage;
     int size;
-    Type * internalStorage;
-    HashNode<Type> internalArray;
+    HashNode<Type> * internalStorage;
     
     int findPosition(HashNode<Type>  currentNode);
     int handleCollision(HashNode<Type>  currentNode);
     void updateSize();
+    
+    int getNextPrime();
+    bool isPrime(int candidateNumber);
     
 public:
     HashTable();

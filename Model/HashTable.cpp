@@ -7,6 +7,7 @@
 //
 
 #include "HashTable.hpp"
+#include <cmath>
 
 template <class Type>
 HashTable<Type> :: HashTable()
@@ -71,4 +72,69 @@ int HashTable<Type> :: findPosition(HashNode<Type>  currentNode)
     position = currentNode.getKey() % capacity;
     
     return position;
+}
+
+template <class Type>
+int HashTable<Type> :: getNextPrime()
+{
+    int nextPrime = (capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime++;
+    }
+    
+    return nextPrime;
+}
+
+template <class Type>
+bool HashTable<Type> :: isPrime(int candidateNumber)
+{
+    bool isPrime = true;
+    
+    if(candidateNumber < 1)
+    {
+        return false;
+    }
+    else if(candidateNumber == 2 || candidateNumber == 3)
+    {
+        isPrime = true;
+    }
+    else if(candidateNumber % 2 == 0)
+    {
+        isPrime = false;
+    }
+    else
+    {
+        for(int next = 3; next <= sqrt(candidateNumber) + 1; next += 2)
+        {
+            if(candidateNumber % next == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    
+    return isPrime;
+}
+
+template <class Type>
+void HashTable<Type> :: updateSize()
+{
+    int updatedCapacity = getNextPrime();
+    HashNode<Type> updatedStorage = new HashNode<Type> [updatedCapacity];
+    int oldCapacity = capacity;
+    capacity = updatedCapacity;
+    
+    for(int index = 0; index < oldCapacity; index++)
+    {
+        if(internalStorage[index] != nullptr)
+        {
+            int updatedPosition = findPosition(internalStorage[index]);
+            updatedStorage[updatedPosition] = internalStorage[index];
+        }
+    }
+    
+    internalStorage = updatedStorage;
 }
