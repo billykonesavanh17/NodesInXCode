@@ -18,6 +18,7 @@
 		49C883231CBBE6EE0061D7E6 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C883211CBBE6EE0061D7E6 /* TreeNode.cpp */; };
 		49C883261CBBF98D0061D7E6 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C883241CBBF98D0061D7E6 /* CTECBinaryTree.cpp */; };
 		49CD17311CE0C9A1006F20B9 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CD172F1CE0C9A1006F20B9 /* HashTable.cpp */; };
+		49CD17341CE0D220006F20B9 /* HashNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CD17321CE0D220006F20B9 /* HashNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,8 @@
 		49C883251CBBF98D0061D7E6 /* CTECBinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECBinaryTree.h; sourceTree = "<group>"; };
 		49CD172F1CE0C9A1006F20B9 /* HashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
 		49CD17301CE0C9A1006F20B9 /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
+		49CD17321CE0D220006F20B9 /* HashNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashNode.cpp; sourceTree = "<group>"; };
+		49CD17331CE0D220006F20B9 /* HashNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				49B84C0E1CCE59EB00D3E9E5 /* Graph.hpp */,
 				49CD172F1CE0C9A1006F20B9 /* HashTable.cpp */,
 				49CD17301CE0C9A1006F20B9 /* HashTable.hpp */,
+				49CD17321CE0D220006F20B9 /* HashNode.cpp */,
+				49CD17331CE0D220006F20B9 /* HashNode.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				498A827E1C99A53B00C4271D /* CTECList.cpp in Sources */,
 				49CD17311CE0C9A1006F20B9 /* HashTable.cpp in Sources */,
 				498A827D1C99A53B00C4271D /* CTECArray.cpp in Sources */,
+				49CD17341CE0D220006F20B9 /* HashNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
