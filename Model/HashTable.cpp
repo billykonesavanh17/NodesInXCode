@@ -52,12 +52,9 @@ void HashTable<Type> :: add(HashNode<Type>  currentNode)
                 positionToInsert = (positionToInsert + 1) % capacity;
                 
             }
-            internalStorage[positionToInsert] = currentNode;
         }
-        else
-        {
+    
             internalStorage[positionToInsert] = currentNode;
-        }
     }
 }
 
