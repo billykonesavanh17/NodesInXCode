@@ -22,7 +22,7 @@ private:
 public:
     HashNode(int key, const Type& value);
     void setKey(int key);
-    void setValue(Type& value);
+    void setValue(const Type& value);
     int getKey();
     Type getValue();
     
