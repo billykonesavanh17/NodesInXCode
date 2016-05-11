@@ -28,11 +28,6 @@ CTECBinaryTree<Type> :: ~CTECBinaryTree()
     }
 }
 
-template<class Type>
-TreeNode<Type> * CTECBinaryTree<Type> :: getRoot()
-{
-    
-}
 
 
 
