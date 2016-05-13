@@ -23,7 +23,7 @@ private:
     int tableSize;
     int tableCapacity;
     
-    HashNode<Type> * internalStorage;
+    HashNode<Type> ** internalStorage;
     CTECList<HashNode<Type>> * tableStorage;
     
     int findPosition(HashNode<Type>  currentNode);//

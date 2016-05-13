@@ -61,7 +61,7 @@ void NodeController :: sortData()
 
 void NodeController::start()
 {
-    tryGraphs();
+    tryHash();
 
 }
 
@@ -230,16 +230,10 @@ void NodeController::tryGraphs()
     testerGraph.addEdge(0,1);
     testerGraph.addEdge(1,2);
     testerGraph.addEdge(2,3);
-    testerGraph.addEdge(3,4);
-    testerGraph.addEdge(4,5);
-    testerGraph.addEdge(5,6);
     testerGraph.addEdge(6,7);
     testerGraph.addEdge(7,8);
     testerGraph.addEdge(8,9);
-    testerGraph.addEdge(9,0);
-   
-    
-
+ 
     
     testerGraph.breadthFirstTraversal(testerGraph, 0);
     
@@ -268,7 +262,26 @@ void NodeController :: tryTree()
 
 void NodeController :: tryHash()
 {
-    HashTable<int> testerHash;
-
+    HashTable<int> tempTable;
+    HashNode<int> tempArray[10];
+    for(int spot = 0; spot < 10; spot++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
+        tempTable.add(temp);
+        tempArray[spot] = temp;
+    }
+    bool test = tempTable.contains(tempArray[0]);
+    string result;
+    if(test)
+    {
+        result = "It's there";
+    }
+    else
+    {
+        result = "Not anywhere";
+    }
+    cout << result << endl;
     
 }

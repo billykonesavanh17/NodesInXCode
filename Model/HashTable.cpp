@@ -15,7 +15,7 @@ HashTable<Type> :: HashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->internalStorage = new HashNode<Type>[capacity];
+    this->internalStorage = new HashNode<Type>*[capacity];
     this -> tableStorage = new CTECList<HashNode<Type>>[capacity];
 }
 
@@ -77,12 +77,13 @@ void HashTable<Type> :: add(HashNode<Type>  currentNode)
             while(internalStorage[positionToInsert] != nullptr)
             {
                 //positionToInsert = (positionToInsert + 1) % capacity;
-                positionToInsert = handleCollision(currentNode);
+                positionToInsert = (positionToInsert + 1) % capacity;
                 
             }
         }
     
-            internalStorage[positionToInsert] = currentNode;
+            internalStorage[positionToInsert] = &currentNode;
+            size ++;
     }
 }
 
@@ -161,7 +162,7 @@ template <class Type>
 void HashTable<Type> :: updateSize()
 {
     int updatedCapacity = getNextPrime();
-    HashNode<Type> updatedStorage = new HashNode<Type> [updatedCapacity];
+    HashNode<Type> ** updatedStorage = new HashNode<Type>* [updatedCapacity];
     int oldCapacity = capacity;
     capacity = updatedCapacity;
     
@@ -169,7 +170,7 @@ void HashTable<Type> :: updateSize()
     {
         if(internalStorage[index] != nullptr)
         {
-            int updatedPosition = findPosition(internalStorage[index]);
+            int updatedPosition = findPosition(*internalStorage[index]);
             updatedStorage[updatedPosition] = internalStorage[index];
         }
     }
@@ -216,7 +217,7 @@ bool HashTable<Type> :: contains(HashNode<Type> currentNode)
     int index = findPosition(currentNode);
     while(internalStorage[index] != nullptr && !isInTable)
     {
-        if(internalStorage[index].getValue() == currentNode.getValue())
+        if(internalStorage[index] -> getValue() == currentNode.getValue())
         {
             isInTable = true;
         }
