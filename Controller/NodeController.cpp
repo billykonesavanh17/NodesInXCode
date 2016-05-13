@@ -221,15 +221,25 @@ void NodeController::tryGraphs()
     testerGraph.addVertex(17);
     testerGraph.addVertex(6);
     testerGraph.addVertex(3);
-    testerGraph.addVertex(11);
+    testerGraph.addVertex(52);
+    testerGraph.addVertex(68);
+    testerGraph.addVertex(23);
+    testerGraph.addVertex(35);
     //Add at least 7 vertices.
     //Connct the vertices
-    testerGraph.addEdge(7,18);
-    testerGraph.addEdge(18,9);
-    testerGraph.addEdge(9,17);
-    testerGraph.addEdge(17,6);
-    testerGraph.addEdge(6,3);
-    testerGraph.addEdge(3,11);
+    testerGraph.addEdge(0,1);
+    testerGraph.addEdge(1,2);
+    testerGraph.addEdge(2,3);
+    testerGraph.addEdge(3,4);
+    testerGraph.addEdge(4,5);
+    testerGraph.addEdge(5,6);
+    testerGraph.addEdge(6,7);
+    testerGraph.addEdge(7,8);
+    testerGraph.addEdge(8,9);
+    testerGraph.addEdge(9,0);
+   
+    
+
     
     testerGraph.breadthFirstTraversal(testerGraph, 0);
     
