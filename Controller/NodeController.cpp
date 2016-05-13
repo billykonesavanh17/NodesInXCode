@@ -65,24 +65,6 @@ void NodeController::start()
 
 }
 
-void NodeController :: tryTree()
-{
-   // CTECBinaryTree<int> testTree;
-    //testTree.insert(7);
-    //testTree.insert(10);
-    //testTree.insert(-5);
-    
-   // cout << testTree.contains(4) << endl;
-   // cout << " Inorder Traveral " << endl;
-   // testTree.inorderTraversal(testTree.getRoot());
-   // cout << " \nPreoder Traversal " << endl;
-   //  testTree.preorderTraversal(testTree.getRoot());
-   // cout << " \nPostorder Traversal " << endl;
-   //  testTree.postorderTraversal(testTree.getRoot());
-   // cout<< " Tree " << endl;
-    
-    
-}
 
 void NodeController::doMergesort()
 {
@@ -250,5 +232,33 @@ void NodeController::tryGraphs()
     testerGraph.addEdge(3,11);
     
     testerGraph.breadthFirstTraversal(testerGraph, 0);
+    
+    
+    
+}
+
+void NodeController :: tryTree()
+{
+    CTECBinaryTree<int> testTree;
+    testTree.insert(7);
+    testTree.insert(10);
+    testTree.insert(-5);
+    
+     cout << testTree.contains(4) << endl;
+     cout << " Inorder Traveral " << endl;
+     testTree.inorderTraversal(testTree.getRoot());
+     cout << " \nPreoder Traversal " << endl;
+     testTree.preorderTraversal(testTree.getRoot());
+     cout << " \nPostorder Traversal " << endl;
+     testTree.postorderTraversal(testTree.getRoot());
+     cout<< " Tree " << endl;
+    
+    
+}
+
+void NodeController :: tryHash()
+{
+    HashTable<int> testerHash;
+
     
 }

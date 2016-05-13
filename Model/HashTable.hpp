@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "HashNode.cpp"
-#include "CTECList.cpp"
+#include "CTECList.h"
 
 template <class Type>
 class HashTable

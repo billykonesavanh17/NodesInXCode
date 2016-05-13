@@ -18,6 +18,7 @@
 #include "../Model/CTECList.cpp"
 #include "../Model/CTECBinaryTree.cpp"
 #include "../Model/Graph.cpp"
+#include "../Model/HashTable.cpp"
 
 using namespace std;
 
@@ -43,6 +44,7 @@ private:
     
     void tryTree();
     void tryGraphs();
+    void tryHash();
 public:
 	NodeController();
 	virtual ~NodeController();

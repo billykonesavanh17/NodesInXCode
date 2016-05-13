@@ -20,6 +20,7 @@ private:
     Type value;
     
 public:
+    HashNode();
     HashNode(int key, const Type& value);
     void setKey(int key);
     void setValue(const Type& value);
