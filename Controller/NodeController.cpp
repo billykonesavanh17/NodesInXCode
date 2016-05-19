@@ -272,7 +272,7 @@ void NodeController :: tryHash()
         tempTable.add(temp);
         tempArray[spot] = temp;
     }
-    bool test = tempTable.contains(tempArray[0]);
+    bool test = tempTable.contains(tempArray[3]);
     string result;
     if(test)
     {
